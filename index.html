@@ -44,7 +44,8 @@
                             </a> |
                             Mobile: {{ mobile }} | LinkedIn:
                             <a target="_BLANK" style="color:#3a1489" v-bind:href="linkedIn"> {{ linkedIn }} </a>|
-                            Current Location: {{ location }} </p>
+                            Current Location: {{ location }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -70,7 +71,7 @@
                             class="list-group-item list-group-item-action flex-column align-items-start">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">{{ each.name }}</h5>
-                                <small class="text-muted">{{  each.startDate }} - {{  each.endDate }}</small>
+                                <small class="text-muted">{{ each.startDate }} - {{ each.endDate }}</small>
                             </div>
                             <p class="mb-1">{{ each.company }} </p>
                             <p class="m-0 p-0 text-muted">{{ each.Role }} </p>
@@ -95,7 +96,7 @@
                             class="list-group-item list-group-item-action flex-column align-items-start">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">{{ each.degree }}</h5>
-                                <small class="text-muted">{{  each.startYear }} - {{  each.endYear }}</small>
+                                <small class="text-muted">{{ each.startYear }} - {{ each.endYear }}</small>
                             </div>
                             <p class="mb-1">{{ each.school }} </p>
                             <p class="m-0 p-0 text-muted">{{ each.location }} </p>
@@ -137,14 +138,15 @@
                                 <h5 class="mb-1">{{ each.title }}</h5>
                             </div>
                             <p class="mb-1">{{ each.company }} </p>
-                            <p class="m-0 p-0 text-muted">{{  each.startDate }} - {{  each.endDate }} </p>
+                            <p class="m-0 p-0 text-muted">{{ each.startDate }} - {{ each.endDate }} </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- production version, optimized for size and speed -->
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -157,39 +159,217 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
         <script>
+            var app = new Vue({
+                el: '#profile',
+                data: {
+                    "name": "Mrityunjay Mukherjee",
+                    "currentTitle": "Full Stack | Cloud Native Developer | DevOps Practitioner | Open Source Software Evangelist",
+                    "email": "mrityunjay.mukherjee@gmail.com",
+                    "mobile": "+91 97691 85558",
+                    "linkedIn": "https://www.linkedin.com/in/mrityunjaymukherjee/",
+                    "location": "Hyderabad/Navi Mumbai",
+                    "summary": [
+                        "More than 15 years of experience in designing, developing and delivering robust and scalable applications",
+                        "Built and lead high performant technology teams",
+                        "Lead the Open Source software adoption, Microservices architecture, Agile and DevOps strategies into breaking Monoliths and being cloud first",
+                        "Part of the SAP India Pre-Sales and Discovery teams, conducted various Customer Workshops and demos",
+                        "Amazing Growth Award for Individual and team for the Q4’ 2011 at SAP India",
+                        "Helped Reliance Industries Ltd., GAIL, ONGC, ABB in their portal implementation and provided support to GIC, SCI, IOCL, Exide, FACT, HUL, Dr. Reddy’s, EDF Energy and various other customers to troubleshoot issues and provide advisory consultation on SAP NetWeaver Portal platform"
+                    ],
+                    "workExperience": [
+                        {
+                            "title": "Associate Vice President",
+                            "company": "Reliance Industries Ltd.",
+                            "location": "Ghansoli, Navi Mumbai",
+                            "startDate": "June, 2019",
+                            "endDate": "Current"
+                        },
+                        {
+                            "title": "General Manager",
+                            "company": "Reliance Industries Ltd.",
+                            "location": "Ghansoli, Navi Mumbai",
+                            "startDate": "Feb, 2014",
+                            "endDate": "May, 2019"
+                        },
+                        {
+                            "title": "Technology Consultant",
+                            "company": "SAP India Pvt. Ltd.",
+                            "location": "Bangalore",
+                            "startDate": "Nov, 2010",
+                            "endDate": "Feb, 2014"
+                        },
+                        {
+                            "title": "Sr. Consultant (SAP NetWeaver)",
+                            "company": "Optimal Solutions  [present NTT Data]",
+                            "location": "Bangalore",
+                            "startDate": "May, 2009",
+                            "endDate": "Nov, 2010"
+                        },
+                        {
+                            "title": "Consultant",
+                            "company": "Enteg Infotech Pvt. Ltd.  [present Altimetrik]",
+                            "location": "Bangalore",
+                            "startDate": "May, 2007",
+                            "endDate": "April, 2009"
+                        }
+                    ],
+                    "education": [
+                        {
+                            "degree": "MCA",
+                            "school": "ICFAI National College",
+                            "location": "Bangalore",
+                            "startYear": "2005",
+                            "endYear": "2007",
+                            "grade": "CGPA"
+                        },
+                        {
+                            "degree": "BSc. Computer Science",
+                            "school": "St. Josephs Degree and PG College",
+                            "location": "Hyderabad",
+                            "startYear": "2001",
+                            "endYear": "2004",
+                            "grade": "%"
+                        },
+                        // {
+                        //     "degree": "Intermediate M.P.C",
+                        //     "school": "St. Josephs Junior College",
+                        //     "location": "Secunderabad",
+                        //     "startYear": "1999",
+                        //     "endYear": "2001",
+                        //     "grade": "%"
+                        // },
+                        // {
+                        //     "degree": "Matriculation",
+                        //     "school": "St. Johns Church High School",
+                        //     "location": "Secunderabad",
+                        //     "startYear": "1992",
+                        //     "endYear": "1999",
+                        //     "grade": "%"
+                        // }
+                    ],
+                    "highlights": [
+                        "Lead 70+ team members into Open Source Software development",
+                        "Responsible for setting up development team of 100+ members during a major SAP Fiori implementation",
+                        "Panelist for Annual trainee selection program",
+                        "Mentoring Interns into the industry",
+                        "In house trainer on various DevOps & UX topics",
+                        "Expanded the Delivery Portfolio to manage applications across iOS, android, flutter, React Native, React, Angular, Node.js, Chatbots, RPA"
+                    ],
+                    "skills": [
+                        "Kubernetes",
+                        "Docker",
+                        "Jenkins",
+                        "Agile",
+                        "Azure DevOps",
+                        "Ansible",
+                        "OpenStack",
+                        "Javascript",
+                        "Node.js",
+                        "React.js",
+                        "Vue.js",
+                        "MongoDB",
+                        "git",
+                        "Java",
+                        "SAP Cloud Platform",
+                        "SAP Mobile Platform",
+                        "Kapsel",
+                        "Cordova",
+                        "SAP NetWeaver Portals",
+                        "SAP Fiori",
+                        "WebDynpro for Java",
+                        "SAP Screen Personas",
+                        "Software Architecture",
+                        "User Experience",
+                        "Consulting",
+                        "Training",
+                        "Software Delivery Management"
+                    ],
+                    "majorProjects": [
+                        {
+                            "name": "Reliance Industries Ltd.",
+                            "startDate": "June, 2019",
+                            "endDate": "current",
+                            "company": "Reliance Industries Ltd.",
+                            "Role": "Head - Enterprise Mobility",
+                            "responsibilities": ["Define and Manage Enterprise Mobility Portfolio", "Create and Manage a team of high performant individuals in new age technologies", "Define Architecture best practices for Open Source Adoption", "Define Microservices architecture, roadmap and ensure adoption across various business segments", "Manage Partner Associates", "Cross train team members into new technologies"]
+                        },
+                        {
+                            "name": "Reliance Industries Ltd.",
+                            "startDate": "Feb, 2014",
+                            "endDate": "May, 2017",
+                            "company": "Reliance Industries Ltd.",
+                            "Role": "Lead - SAP NetWeaver Portal",
+                            "responsibilities": ["Manage SAP Portals and CRM Implementation", "Develop Custom SAP Fiori Apps", "Define Best practices and re-usable assets for SAP Fiori", "Create a team of Fiori professionals", "Deliver 1000+ Custom Fiori Apps", "Create Chatbots based on api.ai (present Dialogflow)", "Define backbone for custom chatbot engine"]
+                        },
+                        {
+                            "name": "STAR @ Reliance Industries Ltd.",
+                            "startDate": "Nov, 2011",
+                            "endDate": "Feb, 2014",
+                            "company": "SAP India Pvt. Ltd.",
+                            "Role": "SAP NetWeaver Portal Architect",
+                            "responsibilities": ["Proof of Concept for Corporate Intranet portal [SAP NetWeaver 7.3]", "Strategy and Approach for NetWeaver Portal Implementation", "Security Guidelines for Internet Facing Portal", "User Experience Guidelines", "UI Guidelines for Portals and CRM WebUI", "Wireframe designs for Corporate Portal", "Web Masters Guide for RIL Portals", "Business Blueprinting", "NWDI Setup for ESS/MSS; Ecommerce and Custom Development tracks", "Deployment and Setup of Standard Business Packages", "Existing ESS/MSS Portal Redesign", "UWL Customization", "Regionalized WPC Area Pages", "Forums and Wiki’s setup", "SAPUI 5 demo setup"]
+                        }, {
+                            "name": "GAIL",
+                            "startDate": "Sep, 2010",
+                            "endDate": "July, 2011",
+                            "company": "SAP India Pvt. Ltd.",
+                            "Role": "SAP NetWeaver Portal Lead",
+                            "responsibilities": ["Define SAP Portal Upgrade Assessment, Strategy and Approach", "Implementation and customization of ESS and MSS", "Provisioning access to BI reports through portal", "Customized Branding for portals", "Configure Adobe Document Services", "Design and Development of Gas Management System on WebDynpro for Java", "Solution Analysis and deployment of Virus Scan Solution for SAP Software"]
+                        },
+                        {
+                            "name": "Oil And Natural Gas Corporation Of India",
+                            "startDate": "Aug, 2008",
+                            "endDate": "Oct, 2009",
+                            "company": "SAP India Pvt. Ltd.",
+                            "Role": "SAP NetWeaver Portal Lead",
+                            "responsibilities": ["Define SAP Portal Upgrade Strategy and Approach", "Implementation and customization of ESS and MSS", "Provisioning access to BI reports through portal", "Customized Branding for portals", "Configure Adobe Document Services", "Single Sign On with SAP GRC system", "Implementation for SAP SRM 7.0"]
+                        },
+                        {
+                            "name": "ABB",
+                            "startDate": "Aug, 2007",
+                            "endDate": "Aug, 2008",
+                            "company": "Enteg Infotech / SAP India Pvt. Ltd.",
+                            "Role": "SAP NetWeaver Portal Consultant",
+                            "responsibilities": ["Implementation and customization of ESS and MSS", "Provisioning access to BI reports through portal", "Customized Branding for portals", "Portal Content Management"]
+                        }
+                    ]
+                }
+            })
             window.addEventListener('offline', function () {
                 alert('You seem to have gone offline, please check your network and try again.')
             });
             //  jquery ready
             $(function () {
-                // Firebase configuration
-                var firebaseConfig = {
-                    apiKey: "AIzaSyBxs_aEOZZE9iB5K0U_k_XXx2-UwV_9HVI",
-                    authDomain: "mrityunjay-mukherjee-github-io.firebaseapp.com",
-                    databaseURL: "https://mrityunjay-mukherjee-github-io.firebaseio.com",
-                    projectId: "mrityunjay-mukherjee-github-io",
-                    storageBucket: "mrityunjay-mukherjee-github-io.appspot.com",
-                    messagingSenderId: "518901552869",
-                    appId: "1:518901552869:web:3f0fffa6966434e992e60c",
-                    measurementId: "G-BC9M7RSJ7P"
-                };
-                // Initialize Firebase
-                firebase.initializeApp(firebaseConfig);
-                var analytics = firebase.analytics();
-                firebase.database().ref('profile').once('value').then(function (data) {
-                    var _data = data.val()[0].data
-                    var app = new Vue({
-                        el: '#profile',
-                        data: _data,
-                    })
+                // // Firebase configuration
+                // var firebaseConfig = {
+                //     apiKey: "AIzaSyBxs_aEOZZE9iB5K0U_k_XXx2-UwV_9HVI",
+                //     authDomain: "mrityunjay-mukherjee-github-io.firebaseapp.com",
+                //     databaseURL: "https://mrityunjay-mukherjee-github-io.firebaseio.com",
+                //     projectId: "mrityunjay-mukherjee-github-io",
+                //     storageBucket: "mrityunjay-mukherjee-github-io.appspot.com",
+                //     messagingSenderId: "518901552869",
+                //     appId: "1:518901552869:web:3f0fffa6966434e992e60c",
+                //     measurementId: "G-BC9M7RSJ7P"
+                // };
+                // // Initialize Firebase
+                // firebase.initializeApp(firebaseConfig);
+                // var analytics = firebase.analytics();
+                // firebase.database().ref('profile').once('value').then(function (data) {
+                //     var _data = data.val()[0].data
+                //     var app = new Vue({
+                //         el: '#profile',
+                //         data: _data,
+                //     })
 
-                    $("#loader").hide()
-                    $("#profile").show()
-                    analytics.logEvent('data_loaded', app)
-                }).catch(function (error) {
-                    analytics.logEvent('error', error)
-                    $("#loader").show()
-                });
+                //     $("#loader").hide()
+                //     $("#profile").show()
+                //     analytics.logEvent('data_loaded', app)
+                // }).catch(function (error) {
+                //     analytics.logEvent('error', error)
+                //     $("#loader").show()
+                // });
+                $("#loader").hide()
+                $("#profile").show()
             });
         </script>
     </div>
